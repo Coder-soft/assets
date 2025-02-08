@@ -2375,6 +2375,8 @@ assets
 
 ## API
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f7db3ce8-0a1e-4a67-9994-5e9fe52ea223/deploy-status)](https://app.netlify.com/sites/creator-api/deploys)
+
 Creator on Wheels Assets Library API. Use this API Link: [https://creator-api.netlify.app/contents](https://creator-api.netlify.app/contents)/{Type}(Folder){filename}/
 
 ### Example:
