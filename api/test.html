@@ -1,11 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Api Checker</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub API Checker</title>
+  <style>
+    /* ===============================
+       Global Reset & Box Sizing
+       =============================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ===============================
+       CSS Variables for Easy Customization
+       =============================== */
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2ecc71;
+      --light-bg: #ecf0f1;
+      --dark-text: #2c3e50;
+      --font-family: 'Montserrat', sans-serif;
+    }
+
+    /* ===============================
+       Global Styles
+       =============================== */
+    body {
+      font-family: var(--font-family);
+      background-color: var(--light-bg);
+      color: var(--dark-text);
+      line-height: 1.6;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    /* Container for centering content */
+    .container {
+      background: #fff;
+      max-width: 800px;
+      width: 100%;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: var(--primary-color);
+    }
+
+    main {
+      text-align: center;
+    }
+
+    /* Button Styling */
+    .btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+    }
+
+    /* Status message styles */
+    #status {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
 </head>
 <body>
-    Api is connected.
+  <div class="container">
+    <header>
+      <h1>GitHub API Checker</h1>
+      <p>
+        Checking the API for <code>coder-soft/assets</code>
+      </p>
+    </header>
+    <main>
+      <button id="checkButton" class="btn">Check API Status</button>
+      <div id="status"></div>
+    </main>
+  </div>
+  <footer>
+    <p>&copy; 2025 Team Wheels. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // When the button is clicked, check the API status.
+    document.getElementById('checkButton').addEventListener('click', function() {
+      const statusDiv = document.getElementById('status');
+      statusDiv.textContent = 'Checking API status...';
+      statusDiv.classList.remove('success', 'error');
+
+      // Fetch the GitHub API endpoint.
+      fetch('https://api.github.com/repos/coder-soft/assets/contents/')
+        .then(response => {
+          if (response.ok) {
+            statusDiv.textContent = 'GitHub API is working!';
+            statusDiv.classList.add('success');
+          } else {
+            statusDiv.textContent = `GitHub API is not working (Status: ${response.status}).`;
+            statusDiv.classList.add('error');
+          }
+        })
+        .catch(error => {
+          statusDiv.textContent = 'Error: ' + error;
+          statusDiv.classList.add('error');
+        });
+    });
+  </script>
 </body>
 </html>
