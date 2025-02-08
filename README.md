@@ -2375,4 +2375,4 @@ assets
 
 ## API
 
-Creator on Wheels Assets Library API. Use this API Link: [https://creator-api.netlify.app](https://creator-api.netlify.app)
+Creator on Wheels Assets Library API. Use this API Link: [https://creator-api.netlify.app/contents](https://creator-api.netlify.app/contents)/{Type}(Folder){filename}/
