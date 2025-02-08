@@ -2376,3 +2376,7 @@ assets
 ## API
 
 Creator on Wheels Assets Library API. Use this API Link: [https://creator-api.netlify.app/contents](https://creator-api.netlify.app/contents)/{Type}(Folder){filename}/
+
+### Example:
+
+[https://creator-api.netlify.app/contents/images/backgrounds/bedwars%202.png](https://creator-api.netlify.app/contents/images/backgrounds/bedwars%202.png)
