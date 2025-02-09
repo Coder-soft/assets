@@ -5,18 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Creator on Wheels API</title>
   <style>
-    /* ===============================
-       Global Reset & Box Sizing
-       =============================== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
-    /* ===============================
-       CSS Variables for Easy Customization
-       =============================== */
     :root {
       --primary-color: #3498db;     /* Main header/nav background */
       --secondary-color: #2ecc71;   /* Accent color for hover states */
@@ -25,10 +18,6 @@
       --dark-text: #2c3e50;         /* Primary text color */
       --font-family: 'Montserrat', sans-serif;
     }
-
-    /* ===============================
-       Global Styles
-       =============================== */
     body {
       font-family: var(--font-family);
       background-color: var(--light-bg);
@@ -36,33 +25,24 @@
       line-height: 1.6;
       font-size: 16px;
     }
-
-    /* A simple container to center content */
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 1rem;
     }
-
-    /* ===============================
-       Header & Navigation
-       =============================== */
     header {
       background-color: var(--primary-color);
       color: #fff;
       padding: 1.5rem 0;
       text-align: center;
     }
-
     header h1 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
-
     nav {
       background-color: var(--secondary-color);
     }
-
     nav ul {
       list-style: none;
       display: flex;
@@ -70,34 +50,24 @@
       gap: 2rem;
       padding: 0.75rem 0;
     }
-
     nav ul li a {
       color: #fff;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s ease;
     }
-
     nav ul li a:hover {
       color: var(--accent-color);
     }
-
-    /* ===============================
-       Main Content Area
-       =============================== */
     main {
       padding: 2rem 0;
     }
-
-    /* A responsive grid for cards or featured items */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
       padding: 1rem 0;
     }
-
-    /* Card Component */
     .card {
       background: #fff;
       border-radius: 8px;
@@ -105,24 +75,17 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
     }
-
     .card img {
       width: 100%;
       display: block;
     }
-
     .card-content {
       padding: 1rem;
     }
-
-    /* ===============================
-       Footer
-       =============================== */
     footer {
       background-color: var(--dark-text);
       color: #fff;
@@ -130,10 +93,6 @@
       padding: 1rem;
       margin-top: 2rem;
     }
-
-    /* ===============================
-       Responsive Media Queries
-       =============================== */
     @media (max-width: 768px) {
       header h1 {
         font-size: 2rem;
@@ -144,14 +103,10 @@
         gap: 1rem;
       }
     }
-
-    /* Additional styling for status text */
     .gr {
       color: rgb(1, 158, 1);
       font-weight: bold;
     }
-
-    /* Styling for code snippets */
     pre {
       background-color: #f4f4f4;
       padding: 0.75rem;
@@ -165,13 +120,10 @@
   </style>
 </head>
 <body>
-  <!-- Header Section -->
   <header>
     <h1>Creator on Wheels API</h1>
     <p class="gr">API is connected successfully.</p>
   </header>
-
-  <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="#overview">Overview</a></li>
@@ -180,19 +132,14 @@
       <li><a href="#examples">Examples</a></li>
     </ul>
   </nav>
-
-  <!-- Main Content -->
   <div class="container">
     <main>
-      <!-- Overview Section -->
       <section id="overview">
         <h2>API Overview</h2>
         <p>
           The Creator on Wheels API provides developers with a robust collection of assets to enhance your projects. Whether you’re building dynamic web applications, game sites, or digital portfolios, our API allows you to integrate high-quality images, backgrounds, and more with ease.
         </p>
       </section>
-
-      <!-- Usage Instructions Section -->
       <section id="usage">
         <h2>How to Use the API</h2>
         <p>
@@ -222,8 +169,6 @@
           For further customization, you can integrate these endpoints into your project using AJAX, fetch API, or your preferred HTTP client.
         </p>
       </section>
-
-      <!-- Endpoints Section -->
       <section id="endpoints">
         <h2>Available Endpoints</h2>
         <ul>
@@ -241,15 +186,12 @@
           </li>
         </ul>
       </section>
-
-      <!-- Examples Section -->
       <section id="examples">
         <h2>Usage Examples</h2>
         <p>
           Here are some examples to help you get started:
         </p>
         <div class="card-grid">
-          <!-- Example Card 1 -->
           <div class="card">
             <div class="card-content">
               <h3>Background Image (Example)</h3>
@@ -259,7 +201,6 @@
               <pre><code>https://creator-api.netlify.app/contents/images/backgrounds/bedwars%202.png</code></pre>
             </div>
           </div>
-          <!-- Example Card 2 -->
           <div class="card">
             
             <div class="card-content">
@@ -274,8 +215,6 @@
       </section>
     </main>
   </div>
-
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Team Wheels. All rights reserved.</p>
   </footer>
